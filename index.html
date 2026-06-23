@@ -4,6 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Retake - CS2 Live Scores, Anywhere</title>
+        <meta name="description" content="Never miss a round. Retake delivers real-time CS2 live scores, match updates, and team tracking across every major tournament — right in your pocket." />
+        <meta name="theme-color" content="#0b0d12" />
+        <link rel="canonical" href="https://retake.app/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://retake.app/" />
+        <meta property="og:title" content="Retake - CS2 Live Scores, Anywhere" />
+        <meta property="og:description" content="Never miss a round. Real-time CS2 match scores, round data, and team tracking — right in your pocket." />
+        <meta property="og:image" content="https://retake.app/images/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Retake - CS2 Live Scores, Anywhere" />
+        <meta name="twitter:description" content="Never miss a round. Real-time CS2 match scores, round data, and team tracking — right in your pocket." />
+        <meta name="twitter:image" content="https://retake.app/images/og-image.png" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -24,6 +41,23 @@
         <link rel="icon" href="images/favicons/favicon.ico" />
         <link rel="manifest" href="images/favicons/site.webmanifest" />
         <meta name="apple-mobile-web-app-title" content="Retake" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Retake",
+            "applicationCategory": "Entertainment",
+            "operatingSystem": "iOS, Web",
+            "description": "Never miss a round. Retake delivers real-time CS2 live scores, match updates, and team tracking across every major tournament.",
+            "url": "https://retake.app/",
+            "author": {
+                "@type": "Organization",
+                "name": "Retake"
+            }
+        }
+        </script>
+
         <link rel="stylesheet" href="styles.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -54,7 +88,7 @@
             <div class="container hero-inner">
                 <div class="hero-content">
                     <div class="hero-badge">Open Beta Coming Soon</div>
-                    <h1>Never miss a <span class="highlight">round</span>.</h1>
+                    <h1>Never miss a <span class="highlight">round.</span></h1>
                     <p class="hero-subtitle">
                         Real-time CS2 round data, match scores, and team
                         tracking, right in your pocket.
@@ -76,8 +110,10 @@
                 <div class="hero-visual">
                     <img
                         src="images/app-screenshot.png"
-                        alt="Retake app screenshot"
+                        alt="Retake app screenshot showing live CS2 match scores"
                         class="hero-phone"
+                        width="1206"
+                        height="2622"
                     />
                 </div>
             </div>
@@ -268,7 +304,7 @@
         <section id="screenshots" class="screenshots">
             <div class="container">
                 <h2 class="section-title">
-                    See it in <span class="highlight">action</span>.
+                    See it in <span class="highlight">action.</span>
                 </h2>
                 <p class="section-desc">
                     A quick look at the Retake experience across the app.
@@ -280,6 +316,7 @@
                             loop
                             muted
                             playsinline
+                            preload="none"
                             class="screenshot-img screenshot-video"
                         ></video>
                         <figcaption class="screenshot-caption">
@@ -293,6 +330,7 @@
                             loop
                             muted
                             playsinline
+                            preload="none"
                             class="screenshot-img screenshot-video"
                         ></video>
                         <figcaption class="screenshot-caption">
@@ -306,6 +344,7 @@
                             loop
                             muted
                             playsinline
+                            preload="none"
                             class="screenshot-img screenshot-video"
                         ></video>
                         <figcaption class="screenshot-caption">
@@ -320,7 +359,7 @@
         <section id="about" class="about">
             <div class="container about-inner">
                 <div class="about-text">
-                    <h2>What is <span class="highlight">Retake</span>?</h2>
+                    <h2>What is <span class="highlight">Retake?</span></h2>
                     <p>
                         Retake is a cross-platform esports companion that brings
                         live Counter-Strike scores to your phone, tablet, and
@@ -346,11 +385,17 @@
                             src="images/logo-glow.png"
                             alt=""
                             class="about-glow"
+                            width="604"
+                            height="604"
+                            loading="lazy"
                         />
                         <img
                             src="images/icon.png"
                             alt="Retake icon"
                             class="about-icon"
+                            width="1039"
+                            height="1058"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -364,7 +409,7 @@
                     <span class="highlight">Every round.</span>
                 </h2>
                 <p class="section-desc">
-                    If it's on HLTV, it's in Retake. From Majors to tier-2
+                    If it's on HLTV, it's on Retake. From Majors to tier-2
                     action, we cover it all.
                 </p>
                 <div class="tournament-grid">
@@ -429,6 +474,20 @@
         <script>
             document.querySelectorAll('.screenshot-video').forEach((video) => {
                 const card = video.closest('.screenshot-card');
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                video.preload = 'auto';
+                                observer.unobserve(video);
+                            }
+                        });
+                    },
+                    { rootMargin: '200px' }
+                );
+                observer.observe(video);
+
                 card.addEventListener('mouseenter', () => video.play());
                 card.addEventListener('mouseleave', () => {
                     video.pause();
@@ -444,6 +503,7 @@
                         src="images/retake-logo.png"
                         alt="Retake"
                         class="footer-logo"
+                        loading="lazy"
                     />
                     <span>&copy; 2026 Retake. All rights reserved.</span>
                 </div>
