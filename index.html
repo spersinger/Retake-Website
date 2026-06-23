@@ -474,6 +474,7 @@
         <script>
             document.querySelectorAll('.screenshot-video').forEach((video) => {
                 const card = video.closest('.screenshot-card');
+                const isTouch = window.matchMedia('(pointer: coarse)').matches;
 
                 const observer = new IntersectionObserver(
                     (entries) => {
@@ -488,11 +489,28 @@
                 );
                 observer.observe(video);
 
-                card.addEventListener('mouseenter', () => video.play());
-                card.addEventListener('mouseleave', () => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
+                if (isTouch) {
+                    const playObserver = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                    video.play().catch(() => {});
+                                } else {
+                                    video.pause();
+                                    video.currentTime = 0;
+                                }
+                            });
+                        },
+                        { threshold: 0.3 }
+                    );
+                    playObserver.observe(video);
+                } else {
+                    card.addEventListener('mouseenter', () => video.play());
+                    card.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
             });
         </script>
 
