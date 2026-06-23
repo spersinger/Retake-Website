@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Retake - CS2 Live Scores, Anywhere</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicons/favicon-16x16.png"
+        />
+        <link rel="icon" href="images/favicons/favicon.ico" />
+        <link rel="manifest" href="images/favicons/site.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="Retake" />
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-inner">
+                <img
+                    src="images/retake-logo.png"
+                    alt="Retake"
+                    class="header-logo"
+                />
+                <nav class="header-nav">
+                    <a href="#features">Features</a>
+                    <a href="#screenshots">Screenshots</a>
+                    <a href="#about">About</a>
+                    <a href="#tournaments">Tournaments</a>
+                    <a href="#download" class="btn-primary btn-small"
+                        >Get Early Access</a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badge">Open Beta Coming Soon</div>
+                    <h1>Never miss a <span class="highlight">round</span>.</h1>
+                    <p class="hero-subtitle">
+                        Real-time CS2 round data, match scores, and team
+                        tracking, right in your pocket.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn-primary btn-large"
+                            >Get Retake</a
+                        >
+                        <a href="#features" class="btn-secondary btn-large"
+                            >See Features</a
+                        >
+                    </div>
+                    <div class="hero-meta">
+                        <span>iOS &middot; Web</span>
+                        <span class="dot"></span>
+                        <span>Live &amp; Accurate</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img
+                        src="images/app-screenshot.png"
+                        alt="Retake app screenshot"
+                        class="hero-phone"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section class="logos">
+            <div class="container">
+                <p>Built with</p>
+                <div class="logos-row">
+                    <span class="logo-chip">Expo</span>
+                    <span class="logo-chip">React Native</span>
+                    <span class="logo-chip">TypeScript</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">
+                    Built for the
+                    <span class="highlight">competitive</span> fan.
+                </h2>
+                <p class="section-desc">
+                    Everything you need to follow the action, wherever you are.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline
+                                    points="22 12 18 12 15 21 9 3 6 12 2 12"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Live Scores</h3>
+                        <p>
+                            Real-time match updates from every major, or minor,
+                            CS2 tournament. Filter by Yesterday, Today, or
+                            Upcoming.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Follow Teams</h3>
+                        <p>
+                            Search and favorite your teams. Their matches always
+                            appear front and center.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                        </div>
+                        <h3>Match Details</h3>
+                        <p>
+                            Tap any match to open a rich bottom sheet with round
+                            breakdowns and player stats.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                                />
+                            </svg>
+                        </div>
+                        <h3>Dark & Light Mode</h3>
+                        <p>
+                            Follows your system theme automatically. Looks great
+                            whether you're gaming at night or browsing in
+                            daylight.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="3"
+                                />
+                                <line x1="9" y1="9" x2="15" y2="9" />
+                                <line x1="9" y1="13" x2="13" y2="13" />
+                                <line x1="9" y1="17" x2="11" y2="17" />
+                            </svg>
+                        </div>
+                        <h3>Live Activities</h3>
+                        <p>
+                            Follow round and match scores right on your iPhone Lock Screen and
+                            Dynamic Island, no need to open the app.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="3"
+                                    y="11"
+                                    width="18"
+                                    height="11"
+                                    rx="2"
+                                    ry="2"
+                                />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                        </div>
+                        <h3>Native Performance</h3>
+                        <p>
+                            Built with Expo & React Native for smooth 60 fps
+                            navigation and instant load times.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screenshots" class="screenshots">
+            <div class="container">
+                <h2 class="section-title">
+                    See it in <span class="highlight">action</span>.
+                </h2>
+                <p class="section-desc">
+                    A quick look at the Retake experience across the app.
+                </p>
+                <div class="screenshots-grid">
+                    <figure class="screenshot-card">
+                        <video
+                            src="images/screenshots/home_screen.webm"
+                            loop
+                            muted
+                            playsinline
+                            class="screenshot-img screenshot-video"
+                        ></video>
+                        <figcaption class="screenshot-caption">
+                            Browse live, upcoming, and recent matches from every
+                            tournament.
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <video
+                            src="images/screenshots/team_view.webm"
+                            loop
+                            muted
+                            playsinline
+                            class="screenshot-img screenshot-video"
+                        ></video>
+                        <figcaption class="screenshot-caption">
+                            Follow your favorite teams and see their upcoming and
+                            past matches.
+                        </figcaption>
+                    </figure>
+                    <figure class="screenshot-card">
+                        <video
+                            src="images/screenshots/full_screen_modal.webm"
+                            loop
+                            muted
+                            playsinline
+                            class="screenshot-img screenshot-video"
+                        ></video>
+                        <figcaption class="screenshot-caption">
+                            Tap any match for a full breakdown of rounds, scores,
+                            and player stats.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-inner">
+                <div class="about-text">
+                    <h2>What is <span class="highlight">Retake</span>?</h2>
+                    <p>
+                        Retake is a cross-platform esports companion that brings
+                        live Counter-Strike scores to your phone, tablet, and
+                        browser. Whether you're on the go or at your desk, you
+                        get instant access to match results, player performance,
+                        and the tournaments that matter.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Filter matches by Yesterday / Today / Upcoming</li>
+                        <li>Search and follow your favorite teams</li>
+                        <li>
+                            Rich match detail modals with round and team
+                            breakdowns
+                        </li>
+                        <li>System-aware dark / light theme</li>
+                        <li>iOS and Web from a single codebase</li>
+                    </ul>
+                </div>
+                <div class="about-logo">
+                    <div class="about-logo-stack">
+                        <img
+                            src="images/logo-glow.png"
+                            alt=""
+                            class="about-glow"
+                        />
+                        <img
+                            src="images/icon.png"
+                            alt="Retake icon"
+                            class="about-icon"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tournaments" class="tournaments">
+            <div class="container">
+                <h2 class="section-title">
+                    Every tournament.
+                    <span class="highlight">Every round.</span>
+                </h2>
+                <p class="section-desc">
+                    If it's on HLTV, it's in Retake. From Majors to tier-2
+                    action, we cover it all.
+                </p>
+                <div class="tournament-grid">
+                    <span class="tournament-chip">IEM Katowice</span>
+                    <span class="tournament-chip">IEM Cologne</span>
+                    <span class="tournament-chip">ESL Pro League</span>
+                    <span class="tournament-chip">BLAST Premier</span>
+                    <span class="tournament-chip">BLAST Fall Final</span>
+                    <span class="tournament-chip">Major Championships</span>
+                    <span class="tournament-chip">Major RMR Qualifiers</span>
+                    <span class="tournament-chip">ESL Challenger</span>
+                    <span class="tournament-chip">DreamHack Open</span>
+                    <span class="tournament-chip">EPL Conference</span>
+                    <span class="tournament-chip">CCT Series</span>
+                    <span class="tournament-chip">PGL Majors</span>
+                    <span class="tournament-chip">StarLadder</span>
+                    <span class="tournament-chip">RES Regional</span>
+                    <span class="tournament-chip">European Pro League</span>
+                    <span class="tournament-chip"
+                        >Thunderpick World Championship</span
+                    >
+                    <span class="tournament-chip">Skyesports Championship</span>
+                    <span class="tournament-chip">BetBoom Dacha</span>
+                    <span class="tournament-chip">BB Dacha</span>
+                    <span class="tournament-chip">ECS</span>
+                    <span class="tournament-chip">EPL World</span>
+                    <span class="tournament-chip">ESEA Advanced</span>
+                    <span class="tournament-chip">Yalla Compass</span>
+                    <span class="tournament-chip">MESA Nomadic</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="waitlist">
+            <div class="container">
+                <div class="waitlist-card">
+                    <h2>
+                        Join the waitlist for
+                        <span class="highlight">Retake</span>
+                    </h2>
+                    <p>
+                        Join the waitlist for the iOS TestFlight beta. No spam,
+                        just one email when we're ready.
+                    </p>
+                    <form class="waitlist-form" action="#" method="post">
+                        <input
+                            type="email"
+                            class="waitlist-input"
+                            placeholder="Enter your email"
+                            required
+                        />
+                        <button type="submit" class="btn-primary btn-large">
+                            Join the Waitlist
+                        </button>
+                    </form>
+                    <p class="waitlist-note">macOS and Web beta also coming.</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.querySelectorAll('.screenshot-video').forEach((video) => {
+                const card = video.closest('.screenshot-card');
+                card.addEventListener('mouseenter', () => video.play());
+                card.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            });
+        </script>
+
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div class="footer-left">
+                    <img
+                        src="images/retake-logo.png"
+                        alt="Retake"
+                        class="footer-logo"
+                    />
+                    <span>&copy; 2026 Retake. All rights reserved.</span>
+                </div>
+                <div class="footer-right">
+                    <span
+                        >Not affiliated with Valve, Hidden Path Entertainment,
+                        HLTV, or any other organization.</span
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
