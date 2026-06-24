@@ -58,20 +58,115 @@
         }
         </script>
 
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            :root {
+                --bg: #0b0d12;
+                --bg-elevated: #12151c;
+                --bg-card: #191d26;
+                --text: #e8eaed;
+                --text-muted: #8b8f96;
+                --accent: #f96d03;
+                --accent-hover: #fc840a;
+                --border: #22262e;
+                --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            }
+            html { scroll-behavior: smooth; }
+            body {
+                font-family: var(--font);
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+            a { text-decoration: none; color: inherit; }
+            img { max-width: 100%; height: auto; display: block; }
+            .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+            .highlight { color: var(--accent); }
+            .section-title { font-size: 2.5rem; font-weight: 800; text-align: center; margin-bottom: 12px; letter-spacing: -0.03em; }
+            .btn-primary {
+                display: inline-flex; align-items: center; justify-content: center;
+                background: var(--bg-card); color: var(--accent); font-weight: 700;
+                border-radius: 10px; border: 1.5px solid var(--accent);
+                transition: background 0.2s, transform 0.15s; cursor: pointer;
+            }
+            .btn-primary:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-1px); }
+            .btn-secondary {
+                display: inline-flex; align-items: center; justify-content: center;
+                background: transparent; color: var(--text); font-weight: 600;
+                border-radius: 10px; border: 1px solid var(--border);
+                transition: border-color 0.2s, transform 0.15s; cursor: pointer;
+            }
+            .btn-secondary:hover { border-color: var(--text-muted); transform: translateY(-1px); }
+            .btn-small { padding: 8px 20px; font-size: 0.875rem; }
+            .btn-large { padding: 14px 32px; font-size: 1rem; }
+            .header {
+                position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+                background: rgba(11, 13, 18, 0.85); backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+            }
+            .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+            .header-logo { height: 28px; width: auto; }
+            .header-nav { display: flex; align-items: center; gap: 28px; }
+            .header-nav a { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+            .header-nav a:hover { color: var(--text); }
+            .hero { padding: 140px 0 80px; overflow: hidden; }
+            .hero-inner { display: flex; align-items: center; gap: 80px; }
+            .hero-content { flex: 1; min-width: 0; }
+            .hero-badge {
+                display: inline-block; background: rgba(249, 109, 3, 0.12);
+                color: var(--accent); font-size: 0.8125rem; font-weight: 600;
+                padding: 6px 14px; border-radius: 20px; margin-bottom: 24px; letter-spacing: 0.02em;
+            }
+            .hero-content h1 { font-size: 4rem; font-weight: 900; line-height: 1.08; letter-spacing: -0.04em; margin-bottom: 20px; }
+            .hero-subtitle { font-size: 1.25rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 36px; }
+            .hero-actions { display: flex; gap: 16px; margin-bottom: 32px; }
+            .hero-meta { display: flex; align-items: center; gap: 10px; font-size: 0.8125rem; color: var(--text-muted); }
+            .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); }
+            .hero-visual { flex: 1; min-width: 0; display: flex; justify-content: center; }
+            .hero-phone { width: 320px; border-radius: 24px; box-shadow: 0 0 80px rgba(217, 61, 61, 0.15), 0 20px 60px rgba(0, 0, 0, 0.5); transform: perspective(1000px) rotateY(-8deg) rotateX(2deg); transition: transform 0.4s ease; }
+            @media (max-width: 768px) {
+                .hero-inner { flex-direction: column; gap: 48px; }
+                .hero-content h1 { font-size: 2.75rem; }
+                .hero-phone { width: 240px; transform: none; }
+                .hero-phone:hover { transform: none; }
+                .hero-actions { flex-direction: column; }
+                .header-nav a:not(.btn-primary) { display: none; }
+            }
+        </style>
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="preload"
+            href="styles.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     </head>
     <body>
         <header class="header">
             <div class="container header-inner">
-                <img
-                    src="images/retake-logo.png"
-                    alt="Retake"
-                    class="header-logo"
-                />
+                <picture>
+                    <source srcset="images/retake-logo.webp" type="image/webp" />
+                    <img
+                        src="images/retake-logo-59.png"
+                        alt="Retake"
+                        class="header-logo"
+                        width="59"
+                        height="56"
+                    />
+                </picture>
                 <nav class="header-nav">
                     <a href="#features">Features</a>
                     <a href="#screenshots">Screenshots</a>
@@ -108,13 +203,42 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <img
-                        src="images/app-screenshot.png"
-                        alt="Retake app screenshot showing live CS2 match scores"
-                        class="hero-phone"
-                        width="1206"
-                        height="2622"
-                    />
+                    <picture>
+                        <source
+                            srcset="images/app-screenshot-420.webp"
+                            media="(min-width: 769px)"
+                            type="image/webp"
+                            width="420"
+                            height="913"
+                        />
+                        <source
+                            srcset="images/app-screenshot-240.webp"
+                            media="(max-width: 768px)"
+                            type="image/webp"
+                            width="240"
+                            height="522"
+                        />
+                        <source
+                            srcset="images/app-screenshot-420.png"
+                            media="(min-width: 769px)"
+                            width="420"
+                            height="913"
+                        />
+                        <source
+                            srcset="images/app-screenshot-240.png"
+                            media="(max-width: 768px)"
+                            width="240"
+                            height="522"
+                        />
+                        <img
+                            src="images/app-screenshot-420.png"
+                            alt="Retake app screenshot showing live CS2 match scores"
+                            class="hero-phone"
+                            width="420"
+                            height="913"
+                            fetchpriority="high"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -382,19 +506,19 @@
                 <div class="about-logo">
                     <div class="about-logo-stack">
                         <img
-                            src="images/logo-glow.png"
+                            src="images/logo-glow-280.png"
                             alt=""
                             class="about-glow"
-                            width="604"
-                            height="604"
+                            width="280"
+                            height="280"
                             loading="lazy"
                         />
                         <img
-                            src="images/icon.png"
+                            src="images/icon-224.png"
                             alt="Retake icon"
                             class="about-icon"
-                            width="1039"
-                            height="1058"
+                            width="224"
+                            height="228"
                             loading="lazy"
                         />
                     </div>
@@ -517,12 +641,17 @@
         <footer class="footer">
             <div class="container footer-inner">
                 <div class="footer-left">
-                    <img
-                        src="images/retake-logo.png"
-                        alt="Retake"
-                        class="footer-logo"
-                        loading="lazy"
-                    />
+                    <picture>
+                        <source srcset="images/retake-logo.webp" type="image/webp" />
+                        <img
+                            src="images/retake-logo-59.png"
+                            alt="Retake"
+                            class="footer-logo"
+                            width="42"
+                            height="40"
+                            loading="lazy"
+                        />
+                    </picture>
                     <span>&copy; 2026 Retake. All rights reserved.</span>
                 </div>
                 <div class="footer-right">
