@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy - Retake</title>
+        <meta name="description" content="Retake privacy policy. We don't collect personal information." />
+        <meta name="theme-color" content="#0b0d12" />
+        <link rel="canonical" href="https://retake.app/privacy.html" />
+
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicons/favicon-16x16.png"
+        />
+        <link rel="icon" href="images/favicons/favicon.ico" />
+        <link rel="manifest" href="images/favicons/site.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="Retake" />
+
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            :root {
+                --bg: #0b0d12;
+                --bg-elevated: #12151c;
+                --bg-card: #191d26;
+                --text: #e8eaed;
+                --text-muted: #8b8f96;
+                --accent: #f96d03;
+                --accent-hover: #fc840a;
+                --border: #22262e;
+                --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-cyrillic-ext.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-cyrillic.woff2) format('woff2');
+                unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-greek-ext.woff2) format('woff2');
+                unicode-range: U+1F00-1FFF;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-greek.woff2) format('woff2');
+                unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-vietnamese.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-latin-ext.woff2) format('woff2');
+                unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400 900;
+                font-display: swap;
+                src: url(fonts/inter-latin.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            html { scroll-behavior: smooth; }
+            body {
+                font-family: var(--font);
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+            a { text-decoration: none; color: inherit; }
+            img { max-width: 100%; height: auto; display: block; }
+            .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+            .highlight { color: var(--accent); }
+            .btn-primary {
+                display: inline-flex; align-items: center; justify-content: center;
+                background: var(--bg-card); color: var(--accent); font-weight: 700;
+                border-radius: 10px; border: 1.5px solid var(--accent);
+                transition: background 0.2s, transform 0.15s; cursor: pointer;
+            }
+            .btn-primary:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-1px); }
+            .btn-small { padding: 8px 20px; font-size: 0.875rem; }
+            .header {
+                position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+                background: rgba(11, 13, 18, 0.85); backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+            }
+            .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+            .header-logo { height: 28px; width: auto; }
+            .header-nav { display: flex; align-items: center; gap: 28px; }
+            .header-nav a { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+            .header-nav a:hover { color: var(--text); }
+            .privacy-content { padding: 140px 0 100px; }
+            .privacy-content h1 {
+                font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em;
+                margin-bottom: 8px; text-align: center;
+            }
+            .privacy-content .updated {
+                text-align: center; font-size: 0.875rem; color: var(--text-muted);
+                margin-bottom: 48px;
+            }
+            .privacy-content h2 {
+                font-size: 1.25rem; font-weight: 700; margin: 40px 0 12px;
+            }
+            .privacy-content p, .privacy-content li {
+                font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px;
+            }
+            .privacy-content ul {
+                list-style: none; margin: 12px 0 12px 20px;
+            }
+            .privacy-content li {
+                position: relative; padding-left: 20px; margin-bottom: 8px;
+            }
+            .privacy-content li::before {
+                content: ""; position: absolute; left: 0; top: 10px;
+                width: 6px; height: 6px; border-radius: 2px; background: var(--accent);
+            }
+            .privacy-content .back-link {
+                display: inline-flex; align-items: center; gap: 6px;
+                font-size: 0.875rem; color: var(--accent); margin-bottom: 40px;
+                transition: opacity 0.2s;
+            }
+            .privacy-content .back-link:hover { opacity: 0.8; }
+            @media (max-width: 768px) {
+                .privacy-content h1 { font-size: 1.875rem; }
+                .header-nav a:not(.btn-primary) { display: none; }
+            }
+        </style>
+        <link
+            rel="preload"
+            href="styles.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-inner">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="images/retake-logo.webp" type="image/webp" />
+                        <img
+                            src="images/retake-logo-59.png"
+                            alt="Retake"
+                            class="header-logo"
+                            width="59"
+                            height="56"
+                        />
+                    </picture>
+                </a>
+                <nav class="header-nav">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#download" class="btn-primary btn-small"
+                        >Get Early Access</a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <section class="privacy-content">
+            <div class="container" style="max-width: 720px;">
+                <a href="index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+                    Back to Home
+                </a>
+
+                <h1>Privacy <span class="highlight">Policy</span></h1>
+                <p class="updated">Last updated: September 2, 2026</p>
+
+                <h2>Information We Collect</h2>
+                <p>Retake is designed with privacy in mind. We only collect the minimum information necessary for basic server operations.</p>
+
+                <h2>What We Store</h2>
+                <ul>
+                    <li><strong>Favorite teams</strong> &mdash; so you can see them in the app.</li>
+                    <li><strong>Currently live games being watched</strong> &mdash; used to display live match data. This information is not linked to you in any way and is not user-identifiable.</li>
+                </ul>
+
+                <h2>What We Don't Collect</h2>
+                <ul>
+                    <li>No names, emails, or account information (beyond the waitlist signup on this website, which is handled by a third party).</li>
+                    <li>No device identifiers or analytics tracking.</li>
+                    <li>No browsing history or usage data.</li>
+                    <li>No location data.</li>
+                </ul>
+
+                <h2>Third-Party Services</h2>
+                <p>Our website uses <a href="https://formspree.io" style="color: var(--accent);">Formspree</a> to handle waitlist email signups. Formspree's own privacy policy applies to that data.</p>
+
+                <h2>Changes to This Policy</h2>
+                <p>If we update this policy, we'll post the revised date above. Continued use of Retake after changes means you accept the updated policy.</p>
+
+                <h2>Contact</h2>
+                <p>If you have questions about this policy, feel free to reach out to us.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div class="footer-left">
+                    <a href="index.html">
+                        <picture>
+                            <source srcset="images/retake-logo.webp" type="image/webp" />
+                            <img
+                                src="images/retake-logo-59.png"
+                                alt="Retake"
+                                class="footer-logo"
+                                width="42"
+                                height="40"
+                                loading="lazy"
+                            />
+                        </picture>
+                    </a>
+                    <span>&copy; 2026 Retake. All rights reserved.</span>
+                </div>
+                <div class="footer-right">
+                    <a href="privacy.html" style="font-size: 0.75rem; color: var(--text-muted); opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

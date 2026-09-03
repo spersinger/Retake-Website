@@ -722,4 +722,8 @@ img {
         gap: 12px;
         text-align: center;
     }
+
+    .footer-right {
+        align-items: center !important;
+    }
 }
